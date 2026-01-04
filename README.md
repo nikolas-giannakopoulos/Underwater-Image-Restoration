@@ -55,8 +55,6 @@ Below are examples of the restoration pipeline applied to real underwater images
   </tr>
 </table>
 
-> **Note:** Please ensure your screenshots are placed in a `screenshots/` folder with the filenames used above, or update the paths accordingly.
-
 ### Quantitative Metrics
 The method was evaluated on 50 underwater images and compared against individual component methods (DCP-only and CLAHE-only). The proposed integrated pipeline achieves the best balance between Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM).
 
@@ -90,7 +88,7 @@ This mode processes the dataset directories to generate the statistical paramete
 
 ```bash
 
-python image_project.py --mode build --raw_dir raw/ --target_dir goal/ --params_path params.pkl
+python image_project.py --mode build --raw_dir raw/ --target_dir goal/ --params_path parameters.pkl
 ```
 Arguments:
 ```bash
@@ -106,7 +104,7 @@ This mode applies the restoration pipeline to a single new image using the gener
 
 ```bash
 
-python image_project.py --mode restore --image path/to/underwater.png --params_path params.pkl --dehaze --sharp_amount 1.0
+python image_project.py --mode restore --image path/to/underwater.png --params_path parameters.pkl --dehaze --sharp_amount 1.0
 ```
 Arguments:
 ```bash
